@@ -53,11 +53,6 @@ header{
     color: #4D4D4D;;
 }
 
-.home-section{
-    height: 100vh;
-    overflow: hidden;
-}
-
 .home-img {
     height: 100%;
     width: 100%;
@@ -65,23 +60,40 @@ header{
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);  
+    object-fit: cover;
+    
+}
+
+.home-section {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .home-intro{
     text-align: center;
     position: absolute;
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 60%;
+    max-height: 40%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 2px rgb(85, 85, 85);
+}
+
+span {
+    color: #ffe8c6;
+    font-weight: 900;
 }
 
 .intro-title{
-    margin-bottom: 2rem;
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+.intro-detail{
+    font-size: 1.5em;
 }
 
 .find-btn{
@@ -93,19 +105,6 @@ header{
     padding: 1rem 6rem;
     border: none;
     border-radius: 5px;
-}
-
-span{
-    color: #ffe8c6;
-    font-weight: 900;
-}
-
-.intro-title{
-    font-size: 4em;
-}
-
-.intro-detail{
-    font-size: 2em;
 }
 
 .footer {
