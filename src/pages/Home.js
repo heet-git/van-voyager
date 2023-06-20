@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "../common/Header"
 import Footer from "../common/Footer"
-import background from "../home-img.jpg"
+import background from "../assets/home-img.jpg"
 
 
 function Home(){
@@ -18,7 +18,7 @@ function Home(){
                     <p className="intro-detail">Add adventure to your life by joining the</p> 
                     <p className="intro-detail"> <span>#vanvoyager</span> movement.</p>
                     <p className="intro-detail">Rent the perfect van to make your perfect road trip.</p>
-                    <button className="find-btn">Find your van</button>
+                    <button type="button"className="find-btn">Find your van</button>
                 </div>
             </div>
         <Footer/>

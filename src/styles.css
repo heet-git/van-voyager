@@ -31,9 +31,13 @@ select {
     font: inherit;
 }
 
-body,
+
 html {
     overflow: hidden;
+}
+
+body{
+    overflow-y: auto;
 }
 
 header{
@@ -112,8 +116,45 @@ span {
     left: 0;
     bottom: 0;
     width: 100%;
-    color: hsl(0, 0%, 67%);
-    background-color: hsl(0, 0%, 15%);
+    color: #ababab;
+    background-color: #262626;
     padding: 1.5rem;
     text-align: center;
 }
+
+
+/*** Vans page ***/
+
+.vans{
+    background-color:#FFF6EC;
+    overflow-y: scroll;
+    height: 80vh;
+    padding: 1rem 2rem     
+}
+
+.van-title{
+    margin: 1rem;
+}
+
+.van-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 2rem;
+}
+
+.van-name{
+    padding: 1rem 5rem;
+}
+
+/* .van-type {
+    height: 34px;
+    padding: 6px 26px;
+    font-style: normal;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFEAD0;
+    color: #4D4D4D;
+    transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+} */
