@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import Header from "../common/Header"
 import Footer from "../common/Footer"
 import { usePanGesture } from "@chakra-ui/react";
@@ -18,6 +19,7 @@ function Vans(){
     }, []) 
 
     const vanElements = vansList.map( van => (
+        <Link to={`/vans/${van.id}`}>
         <div key={van.id} className="van-name">
             <img src={van.imageUrl} className="van-img"/>
             <div className="van-info">
@@ -26,10 +28,8 @@ function Vans(){
             </div>
             <i className="van-type">{van.type}</i>
         </div>
+        </Link> 
     ))
-
-console.log(vansList)
-
 
     return(
         <div>

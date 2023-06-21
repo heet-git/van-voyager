@@ -4,6 +4,7 @@ import "./styles.css"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Vans from "./pages/Vans"
+import VanDetail from "./pages/VanDetail"
 
 import "./server"
 
@@ -15,6 +16,7 @@ return(
     <Route exact path="/" Component={Home} />
     <Route path="/about" Component={About}/>
     <Route path="/vans" Component={Vans}/>
+    <Route path="/vans/:id" Component={VanDetail}/>
   </Routes>
   </>
   )
