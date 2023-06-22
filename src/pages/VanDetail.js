@@ -1,33 +1,32 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import Header from "../common/Header"
-import Footer from "../common/Footer"
+import React from "react"
+import { useParams } from "react-router-dom"
 
-function VanDetail(){
+export default function VanDetail() {
     const params = useParams()
-    const [vanDetails, setVanDetails] = useState(null)
+    const [vanInfo, setVanInfo] = React.useState(null)
 
-useEffect(()=>{
-    fetch(`/api/vans/${params.id}`)
-    .then(res => res.json())
-    .then(data => setVanDetails(data.vans))
+    React.useEffect(() => {
+        fetch(`/api/vans/${params.id}`)
+            .then(res => res.json())
+            .then(data => setVanInfo(data.vans))
+    }, [params.id])
 
-    return () => {
-    // Cleanup code, if needed
-    };
-},[params.id])
-
-
-    return(
-        <div className="van-detail">
-            <Header/>
-               { vanDetails ? (<div>
-                    <img src={vanDetails.imageUrl} />
-                    <p>{vanDetails.description}</p>
-                </div>) : <h2>Loading...</h2>}
-            <Footer/>
+    return (
+        <div className="van-detail-container">
+            {vanInfo ? (
+                <div className="van-detail">
+                    <img src={vanInfo.imageUrl} className="van-detail-img"/>
+                    <div className="van-detail-intro">
+                        <i className={`van-type ${vanInfo.type} selected`}>
+                            {vanInfo.type}
+                        </i>
+                        <h2 className="van-desc-name">{vanInfo.name}</h2>
+                        <p className="van-price">${vanInfo.price}/day</p>
+                        <p className="van-detail-desc">{vanInfo.description}</p>
+                        <button className="link-button">Rent this van</button>
+                    </div>
+                </div>
+            ) : <h2>Loading...</h2>}
         </div>
     )
 }
-
-export default VanDetail

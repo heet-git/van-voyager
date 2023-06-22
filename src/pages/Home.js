@@ -1,6 +1,4 @@
 import React from "react"
-import Header from "../common/Header"
-import Footer from "../common/Footer"
 import background from "../assets/home-img.jpg"
 
 
@@ -10,7 +8,6 @@ function Home(){
 
     return (
     <div className="home">
-        <Header />
             <div className="home-section">
                 <img src={backgroundImg} className="home-img" alt="VW van in garage"></img>
                 <div className="home-intro">
@@ -21,7 +18,6 @@ function Home(){
                     <button type="button"className="find-btn">Find your van</button>
                 </div>
             </div>
-        <Footer/>
     </div>
     )
 }
