@@ -172,11 +172,17 @@ span {
     padding: 1rem 5rem;
 }
 
-.van-info{
+.van-container a {
     text-decoration: none;
     text-align: center;
     color: black;
     margin-top: 1rem;
+}
+
+.van-container a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 /*** Van detail page ***/
@@ -224,4 +230,23 @@ span {
     padding: 1rem 6rem;
     border: 0.5px solid grey;
     border-radius: 5px;
+}
+
+/*** Host ***/
+
+.host-nav {
+    display: flex;
+}
+
+.host-nav a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.host-nav a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 600;
 }
