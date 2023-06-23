@@ -6,7 +6,7 @@ return (
     <header>
         <div className="header-container">
             <div>
-                <h1 className="site-name">VanVoyager</h1>
+            <Link to ="/"className="site-name">VanVoyager</Link>
             </div>
             <nav className="navbar">
                 <Link to="/" className="nav-link">Home</Link>

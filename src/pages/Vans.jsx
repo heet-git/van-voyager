@@ -16,7 +16,7 @@ function Vans(){
     }, []) 
 
     const vanElements = vansList.map( van => (
-        <div key={van.id} className="van-name">
+        <div key={van.id} className="van-container">
             <Link to={`/vans/${van.id}`}>
                 <img src={van.imageUrl} className="van-img"/>
                 <div className="van-info">

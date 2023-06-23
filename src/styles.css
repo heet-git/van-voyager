@@ -59,6 +59,13 @@ header{
     color: #4D4D4D;
 }
 
+.site-name{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    color: black;
+}
+
 /*** Home  ***/
 
 .home-img {
@@ -131,23 +138,29 @@ span {
 
 /*** Vans page ***/
 
-.vans-container{
-    background-color:#FFF6EC;
+.vans-container {
+    background-color: #FFF6EC;
     overflow-y: scroll;
     height: 80vh;
-    padding: 1rem 2rem     
+    padding: 1rem;
 }
 
-.van-title{
+.van-title {
     margin: 1rem;
     text-align: center;
 }
 
-.van-list{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 1rem;
+.van-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.van-container{
+    padding: 1rem;
+    max-width: 30%;
 }
 
 .van-img {
@@ -160,12 +173,11 @@ span {
 }
 
 .van-info{
-    text-decoration: none !important;
+    text-decoration: none;
     text-align: center;
+    color: black;
+    margin-top: 1rem;
 }
-
-
-
 
 /*** Van detail page ***/
 .van-detail-container{
