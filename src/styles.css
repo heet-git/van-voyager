@@ -56,14 +56,34 @@ header{
     margin: 1rem;
     font-weight: 500;
     text-decoration: none;
-    color: #4D4D4D;
+    color: #505050;
+}
+
+.navbar a.active{
+    color: #151515;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 2px solid black;
 }
 
 .site-name{
     text-decoration: none;
     font-size: 2rem;
     font-weight: 800;
-    color: black;
+    color: #151515;
+}
+
+/*** Footer ***/
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: #151515;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 /*** Home  ***/
@@ -122,20 +142,6 @@ span {
     border-radius: 5px;
 }
 
-/*** Footer ***/
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: #ababab;
-    background-color: #262626;
-    padding: 1.5rem;
-    text-align: center;
-}
-
-
 /*** Vans page ***/
 
 .vans-container {
@@ -148,6 +154,7 @@ span {
 .van-title {
     margin: 1rem;
     text-align: center;
+    color: #151515;
 }
 
 .van-list {
@@ -240,13 +247,13 @@ span {
 
 .host-nav a {
     text-decoration: none;
-    color: #4D4D4D;
+    color: #505050;
     font-weight: 500;
-    padding: 5px 20px;
+    margin: 5px 20px;
 }
 
-.host-nav a:hover {
-    color: #161616;
-    text-decoration: underline;
-    font-weight: 600;
+.host-nav a.active{
+    color: #151515;
+    font-weight: bold;
+    border-bottom: 2px solid black;
 }
