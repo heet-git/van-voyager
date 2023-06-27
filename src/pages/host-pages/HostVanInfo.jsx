@@ -25,7 +25,7 @@ function HostVanInfo(){
             <div className="host-van-info-container">
                     {van ? (
                     <div className="host-van-detail">
-                    <img src={van.imageUrl} className ="host-van-detail-img" alt={`Photo of ${van.name}`}/>
+                    <img src={van.imageUrl} className ="host-van-detail-img" alt=""/>
                         <div className="host-van-info">
                             <i className="van-type">{van.type}</i>
                             <h2>{van.name}</h2>  
@@ -38,7 +38,7 @@ function HostVanInfo(){
                         <NavLink to="pricing" className={({ isActive }) =>isActive ? "active" : ""}>Pricing</NavLink>
                         <NavLink to="photos" className={({ isActive }) =>isActive ? "active" : ""}>Photos</NavLink>
                     </nav>
-                <Outlet context={van}/>
+                <Outlet context={{van}}/>
             </div>
         </section>
     )

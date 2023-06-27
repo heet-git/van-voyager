@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function Vans(){
 
-    const [vansList, setVansList] = React.useState([])
+    const [vansList, setVansList] = useState([])
 
     useEffect(()=> {
         fetch("/api/vans")
