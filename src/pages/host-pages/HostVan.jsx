@@ -17,7 +17,7 @@ const hostVans = vanHost.map( van => (
     className="host-van-link-wrapper"
     >
         <div className="listed-van">
-            <img src={van.imageUrl} className="host-van-img"/>
+            <img src={van.imageUrl} className="host-van-img" alt="photo of a van"/>
             <div className="listed-van-info">
                 <h3 className="host-van-name">{van.name}</h3>
                 <p className="host-van-price">${van.price}/day</p>

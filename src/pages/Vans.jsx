@@ -18,7 +18,7 @@ function Vans(){
     const vanElements = vansList.map( van => (
         <div key={van.id} className="van-container">
             <Link to={`/vans/${van.id}`}>
-                <img src={van.imageUrl} className="van-img"/>
+                <img src={van.imageUrl} className="van-img" alt="photo of a van"/>
                 <div className="van-info">
                     <h3 className="van-title-name">{van.name}</h3>
                     <p>${van.price}/day</p>
