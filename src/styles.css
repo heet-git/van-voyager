@@ -117,7 +117,7 @@ header{
     text-shadow: 1px 1px 2px rgb(85, 85, 85);
 }
 
-span {
+.hash-tag {
     color: #ffe8c6;
     font-weight: 900;
 }
@@ -227,6 +227,7 @@ span {
 .van-detail-desc {
     margin-bottom: 3rem;
     max-width: 70%;
+    text-align: justify
 }
 .link-button {
     margin-top: 2rem;
@@ -300,15 +301,37 @@ span {
     margin: 2rem;
 }
 
-/*** Host's van detail ***/
+/*** Host's Van detail ***/
+
+.van-info-links a {
+    text-decoration: none;
+    color: #505050;
+    font-weight: 500;
+    margin: 5px 20px;
+}
+
+.van-info-links a.active {
+    color: #151515;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+section a{
+    text-decoration: none;
+    color: black;
+}
+
+.back-button:hover{
+    font-weight: bold;
+}
 
 .host-van-info-container{  
     max-width: 50%;
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
+    margin-top: 1rem;
 }
-
 .host-van-detail{
     display: flex;
     margin: 1rem;
@@ -325,3 +348,31 @@ span {
     margin: 1rem;
 }
 
+.info-title {
+    font-weight: bold;
+    color: black;
+}
+
+.van-info{
+    max-width: 70%;
+    margin: 1rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+.host-van-info-photo{
+    max-height: 15vh;
+    margin:1rem;
+    border-radius: 10px;
+}
+
+.van-into-price{
+    margin: 2rem 1rem;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.van-into-price span{
+    font-weight: 400;
+    font-size: 1rem;
+}

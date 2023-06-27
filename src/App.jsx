@@ -12,7 +12,9 @@ import Reviews from "./pages/host-pages/Reviews"
 import HostLayout from "./common/HostLayout"
 import HostVan from "./pages/host-pages/HostVan"
 import HostVanInfo from "./pages/host-pages/HostVanInfo"
-import HostVanInfoLayout from "./common/HostVanInfoLayout"
+import HostVanDetail from "./pages/host-pages/HostVanDetail"
+import HostVanPhotos from "./pages/host-pages/HostVanPhotos"
+import HostVanPricing from "./pages/host-pages/HostVanPricing"
 import "./server"
 
 
@@ -30,14 +32,15 @@ return(
         <Route index element={<Dashboard/>}/>
         <Route path="income" element={<Income/>}/>
         <Route path="vans" element={<HostVan/>}/>
-        <Route path="vans/:id" element={<HostVanInfo/>}/>
         <Route path="reviews" element={<Reviews/>}/>
+
+            <Route path="vans/:id" element={<HostVanInfo/>}>
+              <Route index element={<HostVanDetail/>}/>
+              <Route path="pricing" element={<HostVanPricing/>}/>
+              <Route path="photos" element={<HostVanPhotos/>}/>
+            </Route>
       </Route>
     </Route>
-      <Route path="host/van" element={<HostVanInfoLayout/>}>
-
-      </Route>
-
   </Routes>
   </>
   )
