@@ -25,7 +25,7 @@ function HostVanInfo(){
             <div className="host-van-info-container">
                     {van ? (
                     <div className="host-van-detail">
-                    <img src={van.imageUrl} className ="host-van-detail-img" alt=""/>
+                    <img src={van.imageUrl} className ="host-van-detail-img"/>
                         <div className="host-van-info">
                             <i className="van-type">{van.type}</i>
                             <h2>{van.name}</h2>  
