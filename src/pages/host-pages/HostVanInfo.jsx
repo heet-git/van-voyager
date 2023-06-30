@@ -38,7 +38,7 @@ function HostVanInfo(){
                         <NavLink to="pricing" className={({ isActive }) =>isActive ? "active" : ""}>Pricing</NavLink>
                         <NavLink to="photos" className={({ isActive }) =>isActive ? "active" : ""}>Photos</NavLink>
                     </nav>
-                <Outlet context={{van}}/>
+                <Outlet context={van}/>
             </div>
         </section>
     )
