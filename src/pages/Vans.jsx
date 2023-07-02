@@ -40,13 +40,13 @@ function Vans(){
     return(
         <div>
             <div className="vans-container">
+                <h1 className="van-title">Explore our van options</h1>
                 <div className="filters">
                     <button onClick={() => setSearchParams({type: "Luxury"})}>Luxury</button>
                     <button onClick={() => setSearchParams({type: "Rugged"})}>Rugged</button>
                     <button onClick={() => setSearchParams({type: "Simple"})}>Simple</button>
                     <button onClick={() => setSearchParams({type: ""})}>Clear</button>
                 </div>
-                <h1 className="van-title">Explore our van options</h1>
                 <div className="van-list">
                     {vanElements}
                 </div>
