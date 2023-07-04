@@ -18,7 +18,6 @@ function Vans(){
     }, []) 
     
     const typeFilter = searchParams.get("type")
-    console.log(typeFilter)
     const type = typeFilter 
     ? vansList.filter(van => van.type === searchParams.get("type")) 
     : vansList
@@ -45,7 +44,7 @@ function Vans(){
                     <button onClick={() => setSearchParams({type: "Luxury"})}>Luxury</button>
                     <button onClick={() => setSearchParams({type: "Rugged"})}>Rugged</button>
                     <button onClick={() => setSearchParams({type: "Simple"})}>Simple</button>
-                    <button onClick={() => setSearchParams({type: ""})}>Clear</button>
+                    {typeFilter ? <Link to="">Clear filter</Link> : null}
                 </div>
                 <div className="van-list">
                     {vanElements}
