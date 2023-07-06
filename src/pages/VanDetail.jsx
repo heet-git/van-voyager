@@ -1,8 +1,9 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams, useLocation } from "react-router-dom"
 
 export default function VanDetail() {
     const params = useParams()
+    const location = useLocation()
     const [vanInfo, setVanInfo] = React.useState(null)
 
     React.useEffect(() => {
@@ -11,8 +12,15 @@ export default function VanDetail() {
             .then(data => setVanInfo(data.vans))
     }, [params.id])
 
+    const url = location.state && location.state.search || ""
+
     return (
         <div className="van-detail-container">
+            <Link
+                to={`..${url}`}
+                relative="path"
+                className="back-button"
+            >&larr; <span>Back to all vans</span></Link>
             {vanInfo ? (
                 <div className="van-detail">
                     <img src={vanInfo.imageUrl} className="van-detail-img" alt="photo of a van"/>

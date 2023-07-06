@@ -15,6 +15,7 @@ import HostVanInfo from "./pages/host-pages/HostVanInfo"
 import HostVanDetail from "./pages/host-pages/HostVanDetail"
 import HostVanPhotos from "./pages/host-pages/HostVanPhotos"
 import HostVanPricing from "./pages/host-pages/HostVanPricing"
+import NotFound from "./common/NotFound"
 import "./server"
 
 
@@ -40,6 +41,7 @@ return(
               <Route path="photos" element={<HostVanPhotos/>}/>
             </Route>
       </Route>
+      <Route path="*" element={<NotFound/>}/>
     </Route>
   </Routes>
   </>

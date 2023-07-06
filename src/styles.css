@@ -271,7 +271,10 @@ header{
     border-radius: 5px;
 }
 
-
+.van-detail-container .back-button{
+    text-decoration: none;
+    color: #151515;
+}
 
 /*** Host-page ***/
 
@@ -408,4 +411,44 @@ section a{
 .van-into-price span{
     font-weight: 400;
     font-size: 1rem;
+}
+
+/*** Page not found ***/
+
+.page-not-found-container{
+    background-color: #ffe8c6;
+    height: 100vh;
+    text-align: center;
+}
+
+.page-not-found{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.not-found-error{
+    font-size: 10em;
+}
+
+.not-found-title{
+    font-size: 3em;
+}
+
+.not-found-msg{
+    margin-bottom: 2rem;
+    color: #4d4d4d;
+}
+
+.page-not-found-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.go-home-btn{
+    background-color: #151515;
+    border: 1px solid #151515;
+    border-radius: 5px;
+    padding: 1rem 3rem;
 }
