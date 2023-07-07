@@ -20,7 +20,7 @@ export default function VanDetail() {
                 to={`..${url}`}
                 relative="path"
                 className="back-button"
-            >&larr; <span>Back to all vans</span></Link>
+            >&larr; <span>Back to vans</span></Link>
             {vanInfo ? (
                 <div className="van-detail">
                     <img src={vanInfo.imageUrl} className="van-detail-img" alt="photo of a van"/>
