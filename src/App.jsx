@@ -9,7 +9,7 @@ import "./styles.css"
 import Layout from "./common/Layout"
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Vans from "./pages/Vans"
+import Vans, {loader as vansLoader} from "./pages/Vans"
 import VanDetail from "./pages/VanDetail"
 import Dashboard from "./pages/host-pages/Dashboard"
 import Income from "./pages/host-pages/Income"
@@ -27,7 +27,7 @@ const allRoutes = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />}/>
-      <Route path="vans" element={<Vans />}/>
+      <Route path="vans" element={<Vans />} loader={vansLoader}/>
       <Route path="vans/:id" element={<VanDetail />}/>
 
       <Route path="host" element={<HostLayout />}>
