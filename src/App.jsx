@@ -20,6 +20,7 @@ import HostVanInfo from "./pages/host-pages/HostVanInfo"
 import HostVanDetail from "./pages/host-pages/HostVanDetail"
 import HostVanPhotos from "./pages/host-pages/HostVanPhotos"
 import HostVanPricing from "./pages/host-pages/HostVanPricing"
+import Login from "./pages/login"
 import NotFound from "./common/NotFound"
 import Error from "./common/Error"
 import "./server"
@@ -32,6 +33,10 @@ const allRoutes = createBrowserRouter(createRoutesFromElements(
       path="vans" 
       element={<Vans />}
       loader={vansLoader} 
+      />
+      <Route
+        path="login"
+        element={<Login />}
       />
       <Route path="vans/:id" element={<VanDetail />}/>
 
