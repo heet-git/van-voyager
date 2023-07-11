@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link, useSearchParams, useLoaderData } from "react-router-dom"
 import { getVans } from "../common/api"
 
@@ -11,11 +11,11 @@ function Vans(){
 
 const vansList = useLoaderData()
 
-    const typeFilter = searchParams.get("type")
-    const type = typeFilter 
-    ? vansList.filter(van => van.type === searchParams.get("type")) 
-    : vansList
+const typeFilter = searchParams.get("type")
 
+    const type = typeFilter 
+    ? vansList.filter(van => van.type === typeFilter) 
+    : vansList
 
     const vanElements = type.map( van => (
         <div key={van.id} className="van-container">
