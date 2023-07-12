@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import profileImg from "../assets/profile.png"
 
 function Header() {
 return (
@@ -13,7 +14,9 @@ return (
                 <NavLink to="vans" className={({ isActive }) =>isActive ? "active" : ""}>Vans</NavLink>
                 <NavLink to="host" className={({ isActive }) =>isActive ? "active" : ""}>Host</NavLink>
                 <NavLink to="about" className={({ isActive }) =>isActive ? "active" : ""}>About</NavLink>
-                <Link to="login" className="login-link">Login</Link>
+                <Link to="login" className="login-link">
+                    <img src={profileImg} className="profileImg"/>
+                </Link>
             </nav>
         </div>
     </header>
