@@ -2,7 +2,7 @@ import React from "react";
 
 function Dashboard(){
     return(
-        <h1>Host</h1>
+        <h1>Work in Progress</h1>
     )
 }
 

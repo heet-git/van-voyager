@@ -1,10 +1,10 @@
 import React from "react";
 import { Outlet, NavLink, Link, useLoaderData} from "react-router-dom";
 import { getHostVans } from "../../common/api";
-import { authRequired } from "../../common/utils";
+// import { authRequired } from "../../common/utils";
 
 export async function loader( {params} ){
-    await authRequired()
+    // await authRequired()
     return getHostVans(params.id)
 }
 

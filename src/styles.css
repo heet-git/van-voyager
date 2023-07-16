@@ -422,6 +422,18 @@ section a{
     font-size: 1rem;
 }
 
+/*** About ***/
+
+.about-container{
+    background-color: #FFF6EC;
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+.about-info{
+    margin: 2rem;
+}
+
 /*** Page not found ***/
 
 .page-not-found-container{

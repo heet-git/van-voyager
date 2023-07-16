@@ -2,7 +2,7 @@ import React from "react";
 
 function Income(){
     return(
-        <h1>Income</h1>
+        <h1>Work in Progress</h1>
     )
 }
 

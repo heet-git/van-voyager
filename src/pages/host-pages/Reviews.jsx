@@ -2,7 +2,7 @@ import React from "react";
 
 function Reviews(){
     return(
-        <h1>Reviews</h1>
+        <h1>Work in Progress</h1>
     )
 }
 
