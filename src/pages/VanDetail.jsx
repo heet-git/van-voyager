@@ -11,7 +11,7 @@ export default function VanDetail() {
 
     const vanInfo = useLoaderData()
 
-    const url = location.state && location.state.search || ""
+    const url = (location.state && location.state.search) || ""
 
     return (
         <div className="van-detail-container">
@@ -22,7 +22,7 @@ export default function VanDetail() {
             >&larr; <span>Back to vans</span></Link>
 
             <div className="van-detail">
-                <img src={vanInfo.imageUrl} className="van-detail-img" alt="photo of a van"/>
+                <img src={vanInfo.imageUrl} className="van-detail-img" alt="van image"/>
                 <div className="van-detail-intro">
                     <i className={`van-type ${vanInfo.type} selected`}>
                         {vanInfo.type}

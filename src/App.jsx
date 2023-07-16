@@ -23,6 +23,7 @@ import HostVanPricing from "./pages/host-pages/HostVanPricing"
 import Login from "./pages/login"
 import NotFound from "./common/NotFound"
 import Error from "./common/Error"
+import { authRequired } from "./common/utils"
 import "./server"
 
 const allRoutes = createBrowserRouter(createRoutesFromElements(
@@ -46,17 +47,13 @@ const allRoutes = createBrowserRouter(createRoutesFromElements(
       <Route 
       index 
       element={<Dashboard />}
-      loader={async () =>{
-        return null
-      }}
+      loader={async () => await authRequired()}
       />
       
       <Route 
       path="income" 
       element={<Income />}
-      loader={async () =>{
-        return null
-      }}
+      loader={async () => await authRequired()}
       />
       
       <Route 
@@ -68,9 +65,7 @@ const allRoutes = createBrowserRouter(createRoutesFromElements(
       <Route 
       path="reviews" 
       element={<Reviews />}
-      loader={async () =>{
-        return null
-      }}
+      loader={async () => await authRequired()}
       />
 
             <Route 
@@ -81,25 +76,19 @@ const allRoutes = createBrowserRouter(createRoutesFromElements(
               <Route 
               index 
               element={<HostVanDetail />}
-              loader={async ()=>{
-                return null
-                      }}
+              loader={async () => await authRequired()}
 
               />
               <Route 
               path="pricing" 
               element={<HostVanPricing />}
-              loader={async ()=>{
-                  return null
-              }}
+              loader={async () => await authRequired()}
 
               />
               <Route 
               path="photos" 
               element={<HostVanPhotos />}
-              loader={async ()=>{
-                return null
-              }}
+              loader={async () => await authRequired()}
 
               />
             </Route>

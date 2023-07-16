@@ -1,8 +1,10 @@
 import React from "react";
 import { Outlet, NavLink, Link, useLoaderData} from "react-router-dom";
 import { getHostVans } from "../../common/api";
+import { authRequired } from "../../common/utils";
 
-export function loader( {params} ){
+export async function loader( {params} ){
+    await authRequired()
     return getHostVans(params.id)
 }
 
@@ -20,7 +22,7 @@ function HostVanInfo(){
             </Link>
             <div className="host-van-info-container">
                     <div className="host-van-detail">
-                    <img src={van.imageUrl} className ="host-van-detail-img" alt="photo of a van"/>
+                    <img src={van.imageUrl} className ="host-van-detail-img" alt="van image"/>
                         <div className="host-van-info">
                             <i className="van-type">{van.type}</i>
                             <h2>{van.name}</h2>  
