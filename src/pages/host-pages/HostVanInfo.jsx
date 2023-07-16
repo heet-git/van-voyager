@@ -22,7 +22,7 @@ function HostVanInfo(){
             </Link>
             <div className="host-van-info-container">
                     <div className="host-van-detail">
-                    <img src={van.imageUrl} className ="host-van-detail-img" alt="van image"/>
+                    <img src={van.imageUrl} className ="host-van-detail-img" alt=""/>
                         <div className="host-van-info">
                             <i className="van-type">{van.type}</i>
                             <h2>{van.name}</h2>  

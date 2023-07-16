@@ -22,7 +22,7 @@ export default function VanDetail() {
             >&larr; <span>Back to vans</span></Link>
 
             <div className="van-detail">
-                <img src={vanInfo.imageUrl} className="van-detail-img" alt="van image"/>
+                <img src={vanInfo.imageUrl} className="van-detail-img" alt=""/>
                 <div className="van-detail-intro">
                     <i className={`van-type ${vanInfo.type} selected`}>
                         {vanInfo.type}

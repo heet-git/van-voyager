@@ -9,7 +9,7 @@ function Home(){
     return (
     <div className="home">
             <div className="home-section">
-                <img src={backgroundImg} className="home-img" alt="van image"></img>
+                <img src={backgroundImg} className="home-img" alt="Van"></img>
                 <div className="home-intro">
                     <h1 className="intro-title">You got the travel plans, we got the travel vans.</h1>
                     <p className="intro-detail">Add adventure to your life by joining the</p> 

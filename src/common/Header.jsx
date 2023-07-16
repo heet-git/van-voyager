@@ -15,7 +15,7 @@ return (
                 <NavLink to="host" className={({ isActive }) =>isActive ? "active" : ""}>Host</NavLink>
                 <NavLink to="about" className={({ isActive }) =>isActive ? "active" : ""}>About</NavLink>
                 <Link to="login" className="login-link">
-                    <img src={profileImg} alt="profile image" className="profileImg"/>
+                    <img src={profileImg} alt="profile" className="profileImg"/>
                 </Link>
             </nav>
         </div>
