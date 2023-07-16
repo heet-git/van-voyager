@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Outlet, NavLink, useParams, Link } from "react-router-dom";
+import React from "react";
+import { Outlet, NavLink, Link, useLoaderData} from "react-router-dom";
+import { getHostVans } from "../../common/api";
+
+export function loader( {params} ){
+    return getHostVans(params.id)
+}
 
 function HostVanInfo(){
 
-    const params = useParams()
-
-    const[van, setVan] = useState(null)
-
-    useEffect(()=>{
-        fetch(`/api/vans/${params.id}`)
-        .then(res => res.json())
-        .then(data => setVan(data.vans))
-    },[params.id])
-
-
+    const van = useLoaderData()
+    
     return(
         <section>
             <Link 
@@ -23,7 +19,6 @@ function HostVanInfo(){
             &larr; Back to all vans
             </Link>
             <div className="host-van-info-container">
-                    {van ? (
                     <div className="host-van-detail">
                     <img src={van.imageUrl} className ="host-van-detail-img" alt="photo of a van"/>
                         <div className="host-van-info">
@@ -32,13 +27,18 @@ function HostVanInfo(){
                             <h3>${van.price}/day</h3>
                         </div>
                     </div>
-                    ): <p>Loading...</p>}
                     <nav className="van-info-links">
-                        <NavLink to="." end className={({ isActive }) =>isActive ? "active" : ""}>Detail</NavLink>
-                        <NavLink to="pricing" className={({ isActive }) =>isActive ? "active" : ""}>Pricing</NavLink>
-                        <NavLink to="photos" className={({ isActive }) =>isActive ? "active" : ""}>Photos</NavLink>
+                        <NavLink to="." end className={({ isActive }) =>isActive ? "active" : ""}>
+                        Detail
+                        </NavLink>
+                        <NavLink to="pricing" className={({ isActive }) =>isActive ? "active" : ""}>
+                        Pricing
+                        </NavLink>
+                        <NavLink to="photos" className={({ isActive }) =>isActive ? "active" : ""}>
+                        Photos
+                        </NavLink>
                     </nav>
-                <Outlet context={van}/>
+                <Outlet context={van} />
             </div>
         </section>
     )

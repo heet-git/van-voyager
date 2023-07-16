@@ -28,7 +28,7 @@ const hostVans = vanHost.map( van => (
     return(
         <div className="host-van-container">
             <h1 className="host-pages-title">Your Listed vans</h1>
-            <div className="host-van-list">
+            <div className="host-van-list"> 
                 {hostVans}
             </div>
         </div>
