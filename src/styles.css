@@ -424,14 +424,31 @@ section a{
 
 /*** About ***/
 
-.about-container{
+.about-page{
     background-color: #FFF6EC;
     overflow-y: scroll;
     height: 80vh;
 }
 
 .about-info{
-    margin: 2rem;
+    margin: 0 auto;
+    max-width: 50%;
+    text-align: center;
+    line-height: 1.7rem;
+    padding: 5rem;
+}
+
+.about-heading{
+    margin-bottom: 1rem ;
+}
+
+.other-heading{
+    margin: 2rem 0 1rem;
+}
+
+.contact-us{
+    margin-top: 1rem;
+    font-weight: 600;
 }
 
 /*** Page not found ***/
