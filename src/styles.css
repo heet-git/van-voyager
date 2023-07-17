@@ -140,15 +140,20 @@ header{
     font-size: 1.5em;
 }
 
-.find-btn{
-    margin-top: 3rem;
-    color: black;
-    font-size: 1.2em;
-    font-weight: 600;
+.home a{
+    display: inline-block;
+    text-decoration: none;
     background-color: rgb(255, 255, 255);
     padding: 1rem 6rem;
-    border: none;
     border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    margin-top: 3rem;
+    font-size: 1.2em;
+}
+
+.home a:hover {
+    transform: translate(1px, 1px);
 }
 
 /*** Vans page ***/
@@ -269,7 +274,7 @@ header{
     max-width: 70%;
     text-align: justify
 }
-.link-button {
+.van-detail a{
     margin-top: 2rem;
     color: white;
     font-size: 1.2em;
@@ -278,6 +283,11 @@ header{
     padding: 1rem 6rem;
     border: 0.5px solid grey;
     border-radius: 5px;
+    text-decoration: none;
+}
+
+.van-detail a:hover{
+    transform: translate(1px, 1px);
 }
 
 .van-detail-container .back-button{

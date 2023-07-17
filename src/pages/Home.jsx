@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import background from "../assets/home-img.jpg"
 
 
@@ -15,7 +16,7 @@ function Home(){
                     <p className="intro-detail">Add adventure to your life by joining the</p> 
                     <p className="intro-detail"> <span className="hash-tag">#vanvoyager</span> movement.</p>
                     <p className="intro-detail">Rent the perfect van to make your perfect road trip.</p>
-                    <button type="button"className="find-btn">Find your van</button>
+                    <Link to="vans">Find your van</Link>
                 </div>
             </div>
     </div>
