@@ -8,10 +8,20 @@
     margin: 0;
 }
 
+:root{
+    --black: #151515;
+    --white: #ffffff;
+    --main:  #E1D7C6;
+    --grey:  #505050;
+    --footer: #0F1312;
+    --btn: #579BB1;
+}
+
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: white;
+    background-color: var(--white);
     font-family: 'Inter', sans-serif, Times, serif;
 }
 
@@ -61,21 +71,21 @@ header{
     margin: 1rem;
     font-weight: 500;
     text-decoration: none;
-    color: #505050;
+    color: var(--grey);
 }
 
 .navbar a.active{
-    color: #151515;
+    color: var(--black);
     font-weight: bold;
     padding-bottom: 2px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black);
 }
 
 .site-name{
     text-decoration: none;
     font-size: 2rem;
     font-weight: 800;
-    color: #151515;
+    color: var(--black);
 }
 
 .profileImg{
@@ -85,14 +95,16 @@ header{
 /*** Footer ***/
 
 .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
-    background-color: #151515;
+    color: var(--white);
+    background-color: var(--footer);
+    font-weight: 700;
     padding: 1.5rem;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 /*** Home  ***/
@@ -122,13 +134,14 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--white);
     text-shadow: 1px 1px 2px rgb(85, 85, 85);
 }
 
 .hash-tag {
-    color: #ffe8c6;
-    font-weight: 900;
+    color: var(--main);
+    text-shadow: 1px 6px 4px var(--black);
+    font-weight: 800;
 }
 
 .intro-title{
@@ -143,10 +156,10 @@ header{
 .home a{
     display: inline-block;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main);
     padding: 1rem 6rem;
     border-radius: 5px;
-    color: black;
+    color: var(--black);
     font-weight: 600;
     margin-top: 3rem;
     font-size: 1.2em;
@@ -159,7 +172,7 @@ header{
 /*** Vans page ***/
 
 .vans-container {
-    background-color: #FFF6EC;
+    background-color: var(--main);
     overflow-y: scroll;
     height: 80vh;
     padding: 1rem;
@@ -168,7 +181,7 @@ header{
 .van-title {
     margin: 1rem;
     text-align: center;
-    color: #151515;
+    color: var(--black);
 }
 
 .van-list {
@@ -196,12 +209,12 @@ header{
 .van-container a {
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: var(--black);
     margin-top: 1rem;
 }
 
 .van-container a:hover {
-    color: #161616;
+    color: var(--black);
     text-decoration: underline;
     font-weight: 600;
 }
@@ -222,14 +235,14 @@ header{
 }
 
 .filters button:hover{
-    background-color: #fc954b;
-    color: white;
+    background-color: var(--btn);
+    color: var(--white);
     border:none
 }
 
 .vans-container a{
     text-decoration: none;
-    color: #151515;
+    color: var(--black);
 }
 
 .vans-container a:hover{
@@ -239,7 +252,7 @@ header{
 
 /*** Van detail page ***/
 .van-detail-container{
-    background-color: #FFF6EC;
+    background-color: var(--white);
     height: 100vh;
     padding: 2rem;
 }
@@ -266,7 +279,7 @@ header{
     text-align: center;
 }
 .van-price{
-    color: black;
+    color: var(--black);
     margin-bottom: 2rem;
 }
 .van-detail-desc {
@@ -276,12 +289,12 @@ header{
 }
 .van-detail a{
     margin-top: 2rem;
-    color: white;
+    color: var(--white);
     font-size: 1.2em;
     font-weight: 600;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black);
     padding: 1rem 6rem;
-    border: 0.5px solid grey;
+    border: 0.5px solid var(--grey);
     border-radius: 5px;
     text-decoration: none;
 }
@@ -292,13 +305,13 @@ header{
 
 .van-detail-container .back-button{
     text-decoration: none;
-    color: #151515;
+    color: var(--black);
 }
 
 /*** Host-page ***/
 
 .host-page {
-    background-color: #ffe8c6;
+    background-color: var(--main);
     padding: 2rem;
     height: 100vh;
 }
@@ -310,15 +323,15 @@ header{
 
 .host-nav a {
     text-decoration: none;
-    color: #505050;
+    color: var(--grey);
     font-weight: 500;
     margin: 5px 20px;
 }
 
 .host-nav a.active{
-    color: #151515;
+    color: var(--black);
     font-weight: bold;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black);
 }
 
 /*** Host's Van ***/
@@ -335,7 +348,7 @@ header{
     display: flex;
     margin-bottom: 1rem;
     max-width: 50%;
-    background-color: white;
+    background-color: var(--white);
     padding: 1rem;
     border-radius: 10px;
 }
@@ -346,7 +359,7 @@ header{
 
 .host-van-list a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 .listed-van-info {
@@ -360,20 +373,20 @@ header{
 
 .van-info-links a {
     text-decoration: none;
-    color: #505050;
+    color: var(--grey);
     font-weight: 500;
     margin: 5px 20px;
 }
 
 .van-info-links a.active {
-    color: #151515;
+    color: var(--black);
     font-weight: bold;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black);
 }
 
 section a{
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 .back-button:hover{
@@ -382,7 +395,7 @@ section a{
 
 .host-van-info-container{  
     max-width: 50%;
-    background-color: white;
+    background-color: var(--white);
     padding: 1rem;
     border-radius: 10px;
     margin-top: 1rem;
@@ -405,7 +418,7 @@ section a{
 
 .info-title {
     font-weight: bold;
-    color: black;
+    color: var(--black);
 }
 
 .van-info{
@@ -435,7 +448,7 @@ section a{
 /*** About ***/
 
 .about-page{
-    background-color: #FFF6EC;
+    background-color: var(--main);
     overflow-y: scroll;
     height: 80vh;
 }
@@ -464,7 +477,7 @@ section a{
 /*** Page not found ***/
 
 .page-not-found-container{
-    background-color: #ffe8c6;
+    background-color: var(--main);
     height: 100vh;
     text-align: center;
 }
@@ -486,17 +499,17 @@ section a{
 
 .not-found-msg{
     margin-bottom: 2rem;
-    color: #4d4d4d;
+    color: var(--grey);
 }
 
 .page-not-found-container a{
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 .go-home-btn{
-    background-color: #151515;
-    border: 1px solid #151515;
+    background-color: var(--black);
+    border: 1px solid var(--black);
     border-radius: 5px;
     padding: 1rem 3rem;
 }
@@ -504,7 +517,7 @@ section a{
 /*** Login ***/
 
 .login-page{
-    background-color: #ffe8c6;
+    background-color: var(--main);
     height: 100vh;
 }
 
@@ -546,10 +559,10 @@ section a{
 }
 
 .login-form>button {
-    background-color: #FF8C38;
+    background-color: var(--btn);
     border: none;
     border-radius: 6px;
     height: 3.2rem;
     margin-top: 1.5rem;
-    color: white;
+    color: var(--white);
 }
