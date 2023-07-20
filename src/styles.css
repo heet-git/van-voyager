@@ -11,7 +11,7 @@
 :root{
     --black: #151515;
     --white: #ffffff;
-    --main:  #E1D7C6;
+    --main:  #F9E2AF;
     --grey:  #505050;
     --footer: #0F1312;
     --btn: #579BB1;
@@ -100,7 +100,7 @@ header{
     bottom: 0;
     width: 100%;
     color: var(--white);
-    background-color: var(--footer);
+    background-color: black;
     font-weight: 700;
     padding: 1.5rem;
     text-align: center;
@@ -109,21 +109,18 @@ header{
 
 /*** Home  ***/
 
-.home-img {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    object-fit: cover;
-    
-}
-
-.home-section {
+.home-container{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./assets/home-img.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 350px;
+    color: var(--white);
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    padding: 45px 23px;
 }
 
 .home-intro{
@@ -153,7 +150,7 @@ header{
     font-size: 1.5em;
 }
 
-.home a{
+.home-container a{
     display: inline-block;
     text-decoration: none;
     background-color: var(--main);
@@ -169,9 +166,9 @@ header{
     transform: translate(1px, 1px);
 }
 
-/*** Vans page ***/
+/*** Vans ***/
 
-.vans-container {
+.vans{
     background-color: var(--main);
     overflow-y: scroll;
     height: 80vh;
@@ -228,7 +225,7 @@ header{
     margin-right: 1rem;
     padding: 0 1rem;
     background-color: transparent;
-    border: 1.5px solid #4d4d4d;
+    border: 2px solid #4d4d4d;
     border-radius: 7px;
     font-weight: 600;
     font-size: 0.9em;
@@ -250,7 +247,7 @@ header{
     text-decoration: underline;
 }
 
-/*** Van detail page ***/
+/*** Van detail ***/
 .van-detail-container{
     background-color: var(--white);
     height: 100vh;
@@ -283,12 +280,11 @@ header{
     margin-bottom: 2rem;
 }
 .van-detail-desc {
-    margin-bottom: 3rem;
     max-width: 70%;
     text-align: justify
 }
 .van-detail a{
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: var(--white);
     font-size: 1.2em;
     font-weight: 600;
@@ -565,4 +561,184 @@ section a{
     height: 3.2rem;
     margin-top: 1.5rem;
     color: var(--white);
+    font-weight: 600;
+}
+
+
+/*** Media queries
+------------------------------------------
+Responsive Grid Media Queries - 1280, 1024, 768, 480
+1280-1024   - desktop (default grid)
+1024-768    - tablet landscape
+768-480     - tablet 
+480-less    - phone landscape & smaller
+--------------------------------------------
+@media all and (min-width: 1024px) and (max-width: 1280px) {}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {}
+
+@media all and (min-width: 480px) and (max-width: 768px) {}
+
+@media all and (max-width: 480px) {}
+
+
+***/
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    :root{
+        --md-main: #308594;
+    }
+
+    /*** Home ***/
+    .home-container {
+        background: none;
+        background-color: var(--md-main);
+    }
+
+    /*** Vans ***/
+
+    .vans{
+        background-color: var(--md-main);
+    }
+
+    .van-title{
+        color: var(--white);
+    }
+
+    .van-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 34px;
+    }
+
+    .van-container{
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .van-container a{
+        color: var(--white);
+    }
+
+    .van-container a:hover {
+        color: var(--black);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .filters button{
+        margin-right: 1rem;
+        padding: 0 1rem;
+        background-color: transparent;
+        border: 2px solid var(--grey);
+        border-radius: 7px;
+        font-weight: 600;
+        font-size: 0.9em;
+    }
+
+    .filters button:hover{
+        background-color: var(--grey);
+        color: var(--white);
+        border:none
+    }
+
+    /*** Van detail ***/
+
+    .van-detail{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .van-detail-img {
+        max-width: 90%;
+        border-radius: 5%;
+        max-width: 80%;
+    }
+
+    .van-detail-intro{
+        padding: 1rem 0;
+    }
+
+    .van-price{
+        margin-bottom: 1rem;
+    }
+
+    .van-detail-desc {
+        max-width: 100%;
+        text-align: justify
+    }
+
+    .van-detail a{
+        margin: 1.5rem;
+    }
+
+    /*** Host-page ***/
+
+    .host-page{
+    background-color: var(--md-main);
+    }
+
+    .host-nav a {
+    color: var(--white);
+    }
+
+    /*** Host's Van ***/
+
+    .host-van-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:0.5rem;
+    }
+
+    .listed-van {
+        max-width: 95%;
+        padding: 0;
+    }
+
+    .host-van-img{
+        margin: 1rem;
+    }
+
+    .listed-van-info{
+        margin: 1rem;
+    }
+
+    /*** About ***/
+
+    .about-page{
+        background-color: var(--md-main);
+        color: var(--white);
+    }
+
+    .about-info{
+        margin: 0 auto;
+        max-width: 100%;
+        text-align: center;
+        line-height: 1.7rem;
+        padding: 5rem;
+    }
+
+    .about-heading, .other-heading{
+        color: var(--main);
+    }
+
+    /*** Login ***/
+
+    .login-page{
+        background-color: var(--md-main);
+    }
+
+    .login-container{
+        padding: 25% 0;
+    }
+
+    .login-form{
+        max-width: 50%;
+    }
+
+    .login-form>button {
+        background-color: var(--main);
+        color: var(--black);
+    }
 }

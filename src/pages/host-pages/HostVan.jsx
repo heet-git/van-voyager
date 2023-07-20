@@ -12,6 +12,7 @@ function HostVan(){
 const vanHost = useLoaderData()
 
 const hostVans = vanHost.map( van => (
+    <div>
     <Link
     to={`/host/vans/${van.id}`}
     key={van.id}
@@ -25,6 +26,7 @@ const hostVans = vanHost.map( van => (
             </div>
         </div>
     </Link>
+</div>
 ))
 
     return(

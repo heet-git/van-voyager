@@ -32,7 +32,7 @@ const typeFilter = searchParams.get("type")
 
     return(
         <div>
-            <div className="vans-container">
+            <div className="vans">
                 <h1 className="van-title">Explore our van options</h1>
                 <div className="filters">
                     <button onClick={() => setSearchParams({type: "Luxury"})}>Luxury</button>
