@@ -146,6 +146,7 @@ header{
 
 .intro-detail{
     font-size: 1.5em;
+    line-height: 2em;
 }
 
 .home-container a{
@@ -605,6 +606,18 @@ Responsive Grid Media Queries - 1280, 1024, 768, 480
         background-size: cover;
     }
 
+    .intro-title{
+        line-height: 1.1em;
+    }
+
+    .intro-detail{
+        line-height: 1.7em;
+    }
+/* 
+    .home-container a{
+        margin: 1rem;
+    } */
+
     /*** Vans ***/
 
     .vans{
@@ -687,9 +700,8 @@ Responsive Grid Media Queries - 1280, 1024, 768, 480
     .login-form{
         max-width: 50%;
     }
-
 }
-/* 
+
 @media all and (max-width: 480px) {
 
-} */
+}
