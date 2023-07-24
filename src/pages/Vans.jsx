@@ -18,11 +18,11 @@ const typeFilter = searchParams.get("type")
     : vansList
 
     const vanElements = type.map( van => (
-        <div key={van.id} className="van-container">
+        <div key={van.id} className="van-list">
             <Link to={van.id} state={{search: `?${searchParams.toString()}`}}>
                 <img src={van.imageUrl} className="van-img" alt=""/>
                 <div className="van-info">
-                    <h3 className="van-title-name">{van.name}</h3>
+                    <h3 className="van-name">{van.name}</h3>
                     <p>${van.price}/day</p>
                     <i className="van-type">{van.type}</i>
                 </div>
@@ -40,7 +40,7 @@ const typeFilter = searchParams.get("type")
                     <button onClick={() => setSearchParams({type: "Simple"})}>Simple</button>
                     {typeFilter ? <Link to="">Clear filter</Link> : null}
                 </div>
-                <div className="van-list">
+                <div className="van-container">
                     {vanElements}
                 </div>
             </div>

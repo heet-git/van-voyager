@@ -126,10 +126,10 @@ header{
     width: 100%;
     color: var(--white);
     background-color: black;
-    font-weight: 700;
+    /* font-weight: 700; */
     padding: 1.5rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /*** Home  ***/
@@ -204,47 +204,12 @@ header{
     color: var(--black);
 }
 
-.van-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-.van-container{
-    padding: 1rem;
-    max-width: 30%;
-}
-
-.van-img {
-    max-height: 70%;
-    border-radius: 5%;
-}
-
-.van-name{
-    padding: 1rem 5rem;
-}
-
-.van-container a {
-    text-decoration: none;
-    text-align: center;
-    color: var(--black);
-    margin-top: 1rem;
-}
-
-.van-container a:hover {
-    color: var(--black);
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.filters{
+.filters {
     display: flex;
     justify-content: flex-end;
 }
 
-.filters button{
+.filters button {
     margin-right: 1rem;
     padding: 0 1rem;
     background-color: transparent;
@@ -254,10 +219,44 @@ header{
     font-size: 0.9em;
 }
 
-.filters button:hover{
+.filters button:hover {
     background-color: var(--btn);
     color: var(--white);
-    border:none
+    border: none
+}
+
+.van-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.van-list{
+    padding: 1rem;
+    max-width: 30%;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin:1rem
+}
+
+.van-img {
+    max-height: 70%;
+    border-radius: 10px;
+}
+
+.van-container a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--black);
+    /* margin-top: 1rem; */
+}
+
+.van-container a:hover {
+    color: var(--black);
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 .vans-container a{
@@ -618,10 +617,6 @@ section a{
         line-height: 1.7em;
         font-size: 1.7em;
     }
-/* 
-    .home-container a{
-        margin: 1rem;
-    } */
 
     /*** Vans ***/
 
@@ -629,16 +624,20 @@ section a{
         background-color: var(--main);
     }
 
-    .van-list{
+    .van-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         gap: 34px;
     }
 
-    .van-container{
+    .van-list{
         max-width: 100%;
-        padding: 0;
+    }
+    
+    .van-info{
+        text-align: center;
+        margin: 1rem auto;
     }
 
     .van-container a:hover {
@@ -718,7 +717,7 @@ section a{
     }
 
     .site-name{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .navbar a{
@@ -752,7 +751,7 @@ section a{
     /*** Footer ***/
 
     .footer{
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 1rem;
     }
 
@@ -763,12 +762,12 @@ section a{
     }
 
     .intro-title{
-        font-size: 1.5em;
-        width: 70vw;
+        font-size: 2em;
+        width: 60vw;
     }
     
     .intro-detail{
-        font-size: 1em;
+        font-size: 1.2em;
         line-height: 1.5em;
     }
 
@@ -778,5 +777,62 @@ section a{
         margin-top: 2rem;
     }
     
+    /*** Vans ***/
+
+    .vans{
+        padding-bottom: 7rem;
+    }
+
+    .van-title{
+        font-size: 1.3rem;
+        margin: 0 0 1rem;
+    }
+
+    .filters{
+        justify-content: space-evenly;
+    }
+
+    .filters button{
+        margin: 0;
+        font-size: 0.7rem;
+    }
+
+    .van-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    
+    .van-list{
+        max-width: 100%;
+        padding: 0.5rem;
+        background-color: var(--white);
+    }
+
+    .van-info{
+        text-align: center;
+        line-height: 1.5em; 
+        margin: 0.5rem auto;
+    }
+
+
+    .van-container a{
+        margin: 0;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .van-info{
+        line-height: 1rem;
+    }
+
+    .van-name{
+        font-size: 1em;
+        margin-bottom: 0.3rem;
+    }
+    
+    .van-info p, .van-type{
+        font-size: 0.9em;
+    }
 
 }
