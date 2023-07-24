@@ -204,6 +204,15 @@ header{
     color: var(--black);
 }
 
+.vans a{
+    text-decoration: none;
+}
+
+.clear-filter:hover{
+    font-weight: 600;
+    border-bottom: 1px solid #551A91;
+}
+
 .filters {
     display: flex;
     justify-content: flex-end;
@@ -250,7 +259,6 @@ header{
     text-decoration: none;
     text-align: center;
     color: var(--black);
-    /* margin-top: 1rem; */
 }
 
 .van-container a:hover {
@@ -652,7 +660,6 @@ section a{
     }
 
     .van-detail-img {
-        max-width: 90%;
         max-width: 80%;
     }
 
@@ -794,6 +801,11 @@ section a{
 
     .filters button{
         margin: 0;
+        padding: 0 0.7rem;
+        font-size: 0.7rem;
+    }
+
+    .clear-filter{
         font-size: 0.7rem;
     }
 
@@ -805,7 +817,7 @@ section a{
     
     .van-list{
         max-width: 100%;
-        padding: 0.5rem;
+        margin: 0.3rem;
         background-color: var(--white);
     }
 
@@ -814,7 +826,6 @@ section a{
         line-height: 1.5em; 
         margin: 0.5rem auto;
     }
-
 
     .van-container a{
         margin: 0;
@@ -835,4 +846,56 @@ section a{
         font-size: 0.9em;
     }
 
+    /*** Van detail ***/
+
+    .van-detail-container{
+        margin-bottom: 5rem;
+        overflow: scroll;
+    }
+
+    .back-button{
+        font-size: 0.8rem;
+    }
+
+    .van-detail{
+        flex-direction: column;
+        width: fit-content;
+        align-items: center;
+        padding: 0;
+    }
+
+    .van-detail-img {
+        max-width: 100%;
+    }
+
+    .van-detail-intro {
+        margin-top: 0;
+        padding: 0.5rem;
+    }
+
+    .van-desc-name{
+        font-size: 1rem;
+    }
+
+    .van-price{
+        font-size: 0.8rem;
+    }
+
+    .van-detail-desc{
+        font-size: 0.8rem;
+        padding: 0 1rem;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .van-price{
+        margin-bottom: 1rem;
+    }
+
+    .van-detail a {
+        font-size: 0.8rem;
+        margin: 1rem;
+        font-weight: 400;
+        padding: 0 1.5rem;
+    }
 }

@@ -38,7 +38,7 @@ const typeFilter = searchParams.get("type")
                     <button onClick={() => setSearchParams({type: "Luxury"})}>Luxury</button>
                     <button onClick={() => setSearchParams({type: "Rugged"})}>Rugged</button>
                     <button onClick={() => setSearchParams({type: "Simple"})}>Simple</button>
-                    {typeFilter ? <Link to="">Clear filter</Link> : null}
+                    {typeFilter ? <Link to="" className="clear-filter">Clear filter</Link> : null}
                 </div>
                 <div className="van-container">
                     {vanElements}
