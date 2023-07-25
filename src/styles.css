@@ -951,4 +951,56 @@ section a{
     }
 
     /*** About ***/
+    .about-info {
+        max-width: 100%;
+        padding: 1rem;
+        line-height: 1.3rem;
+        font-size: 0.7rem;
+    }
+
+    .about-heading{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .other-heading{
+        font-size: 1rem;
+        margin: 0.5rem 0 0;
+    }
+
+    /*** Page not found ***/
+
+    .not-found-error{
+        font-size: 5rem;
+    }
+
+    .not-found-title{
+        font-size: 2rem;
+    }
+
+    .not-found-msg{
+        font-size: 1.2rem;
+    }
+
+    .go-home-btn{
+        padding: 0.5rem 2rem;
+    }
+
+    /*** Login ***/
+
+    .login-container{
+        padding: 25% 0;
+    }
+
+    .login-form{
+        max-width: 75%;
+    }
+
+    .login-form input{
+        height: 2.5rem;
+    }
+
+    .login-form>button{
+        height: 2.5rem;
+    }
 }
