@@ -126,7 +126,6 @@ header{
     width: 100%;
     color: var(--white);
     background-color: black;
-    /* font-weight: 700; */
     padding: 1.5rem;
     text-align: center;
     font-size: 1rem;
@@ -355,7 +354,7 @@ header{
     text-decoration: none;
     color: var(--grey);
     font-weight: 500;
-    margin: 5px 20px;
+    margin: 0.5rem 1.2rem;
 }
 
 .host-nav a.active{
@@ -481,7 +480,7 @@ section a{
     background-color: var(--main);
     overflow-y: scroll;
     height: 100vh;
-    padding-bottom: 13rem;
+    padding-bottom: 10rem;
 }
 
 .about-info{
@@ -489,15 +488,15 @@ section a{
     max-width: 50%;
     text-align: center;
     line-height: 1.7rem;
-    padding: 3rem;
+    padding: 4rem;
 }
 
 .about-heading{
-    margin-bottom: 1rem ;
+    margin: 0 0 1rem ;
 }
 
 .other-heading{
-    margin: 2rem 0 1rem;
+    margin: 1rem 0;
 }
 
 .about-heading,
@@ -849,8 +848,8 @@ section a{
     /*** Van detail ***/
 
     .van-detail-container{
-        margin-bottom: 5rem;
         overflow: scroll;
+        padding-bottom: 10rem;
     }
 
     .back-button{
@@ -859,18 +858,20 @@ section a{
 
     .van-detail{
         flex-direction: column;
-        width: fit-content;
         align-items: center;
         padding: 0;
-    }
-
-    .van-detail-img {
         max-width: 100%;
     }
-
+    
+    .van-detail-img {
+        max-width: 75%;
+        border-radius: 5%;
+    }
+    
     .van-detail-intro {
-        margin-top: 0;
-        padding: 0.5rem;
+        margin-top: 0.5rem;
+        padding: 0;
+        width: 100%;
     }
 
     .van-desc-name{
@@ -879,23 +880,75 @@ section a{
 
     .van-price{
         font-size: 0.8rem;
+        margin-bottom: 1rem;
     }
 
     .van-detail-desc{
-        font-size: 0.8rem;
-        padding: 0 1rem;
+        padding: 0;
         margin: 0;
+        font-size: 0.8rem;
         max-width: 100%;
-    }
-
-    .van-price{
-        margin-bottom: 1rem;
     }
 
     .van-detail a {
         font-size: 0.8rem;
-        margin: 1rem;
+        margin: 1.5rem;
         font-weight: 400;
-        padding: 0 1.5rem;
+        padding: 0.5rem 2rem;
     }
+
+    /*** Host-page ***/
+
+    .host-page {
+        padding: 1rem;
+    }
+
+    .host-nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .host-nav a{
+        border: 1.5px solid var(--grey);
+        border-radius: 5px;
+    }
+    
+    .host-nav a.active{
+        color: var(--black);
+        font-weight: bold;
+    }
+
+    /*** Host's Van ***/
+
+    .host-pages-title{
+        margin: 0;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .host-van-list{
+        flex-wrap: wrap;
+        padding: 0 0.5rem;
+    }
+    
+    .listed-van {
+        padding: 0.3rem;
+        max-width: 100%;
+    }
+
+    .host-van-img{
+        margin: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .listed-van-info{
+        margin: 0;
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /*** About ***/
 }
