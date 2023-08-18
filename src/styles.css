@@ -609,7 +609,8 @@ section a{
 
     /*** Home ***/
     .home-container {
-        background: linear-gradient(0deg, #00000075, rgba(0, 0, 0, 0.46)), url("./assets/sm-home-img.jpg") no-repeat center center;
+        background: linear-gradient(0deg, #00000075, rgba(0, 0, 0, 0.46)), 
+        url("./assets/sm-home-img.jpg") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -733,6 +734,7 @@ section a{
     .nav-menu{
         position: absolute;
         flex-direction: column;
+        margin-top: 0.7rem;
         padding: 0;
         left: 0;
         width: 100%;
@@ -747,7 +749,7 @@ section a{
     }
 
     .nav-item{
-        margin: 16px 0; 
+        padding: 0.5rem;
     }
 
     .profileImg{
@@ -951,6 +953,7 @@ section a{
     }
 
     /*** About ***/
+
     .about-info {
         max-width: 100%;
         padding: 1rem;
